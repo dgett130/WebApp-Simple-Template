@@ -1,0 +1,8 @@
+.venv
+.idea
+__pycache__
+*.pyc
+test.db
+.python-version
+Dockerfile
+.dockerignore

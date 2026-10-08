@@ -1,0 +1,151 @@
+{
+  "info": {
+    "_postman_id": "3dc86fc3-ff47-4380-b75f-6985bec7c7e6",
+    "name": "Template Application API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18380052"
+  },
+  "item": [
+    {
+      "name": "Vehicles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8000/vehicles",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "vehicles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Vehicles",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Panda\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/vehicles",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "vehicles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"email@gmail.com\",\r\n    \"username\":\"cicciopasticcio\",\r\n    \"password\":\"password\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/auth/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Token",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "cicciopasticcio",
+              "type": "text",
+              "uuid": "13e0d44e-1449-4512-be6f-4710d93279ae"
+            },
+            {
+              "key": "password",
+              "value": "password",
+              "type": "text",
+              "uuid": "fb047dff-7e40-48f5-af18-ae255fa70ba5"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8000/auth/token",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "auth",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "me",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjaWNjaW9wYXN0aWNjaW8iLCJleHAiOjE3OTEzMTkzNTl9.-OGqMkKo-Vryz1RbpH7dDVgLEzUyqOAvXiAyNraYFUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8000/users/me",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "me"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
